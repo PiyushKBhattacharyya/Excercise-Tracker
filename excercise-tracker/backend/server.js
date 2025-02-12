@@ -25,11 +25,12 @@ mongoose
   .then(() => console.log("MongoDB Database connection established successfully"))
   .catch((err) => console.error("MongoDB connection error:", err));
 
-const excerciseRouter = require("./routes/excercises");
-const UsersRouter = require("./routes/users");
+// Load routes (Fixed spelling)
+const exerciseRouter = require("./routes/exercises");
+const usersRouter = require("./routes/users");
 
-app.use("/excercises", excerciseRouter);
-app.use("/users", UsersRouter);
+app.use("/exercises", exerciseRouter); // Fixed spelling
+app.use("/users", usersRouter);
 
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
